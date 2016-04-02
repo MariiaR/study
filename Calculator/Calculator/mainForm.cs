@@ -41,5 +41,17 @@ namespace Calculator
             Button button = (Button) sender;
             digitButtonClick(button.Text);
         }
+
+        private void plusButton_Click(object sender, EventArgs e)
+        {
+            _a = decimal.Parse(inputTextBox.Text);
+            inputTextBox.Text = "0";
+        }
+
+        private void resultButton_Click(object sender, EventArgs e)
+        {
+            _b = decimal.Parse(inputTextBox.Text);
+            inputTextBox.Text = (_a + _b).ToString();
+        }
     }
 }

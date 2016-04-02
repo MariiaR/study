@@ -438,6 +438,7 @@
             this.plusButton.TabStop = false;
             this.plusButton.Text = "+";
             this.plusButton.UseVisualStyleBackColor = false;
+            this.plusButton.Click += new System.EventHandler(this.plusButton_Click);
             // 
             // resultButton
             // 
@@ -455,6 +456,7 @@
             this.resultButton.TabStop = false;
             this.resultButton.Text = "=";
             this.resultButton.UseVisualStyleBackColor = false;
+            this.resultButton.Click += new System.EventHandler(this.resultButton_Click);
             // 
             // inputTextBox
             // 
