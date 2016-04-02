@@ -156,6 +156,7 @@
             this.sevenButton.TabStop = false;
             this.sevenButton.Text = "7";
             this.sevenButton.UseVisualStyleBackColor = false;
+            this.sevenButton.Click += new System.EventHandler(this.sevenButton_Click);
             // 
             // eightButton
             // 
@@ -173,6 +174,7 @@
             this.eightButton.TabStop = false;
             this.eightButton.Text = "8";
             this.eightButton.UseVisualStyleBackColor = false;
+            this.eightButton.Click += new System.EventHandler(this.eightButton_Click);
             // 
             // nineButton
             // 
@@ -190,6 +192,7 @@
             this.nineButton.TabStop = false;
             this.nineButton.Text = "9";
             this.nineButton.UseVisualStyleBackColor = false;
+            this.nineButton.Click += new System.EventHandler(this.nineButton_Click);
             // 
             // divisionButton
             // 
@@ -241,6 +244,7 @@
             this.fourButton.TabStop = false;
             this.fourButton.Text = "4";
             this.fourButton.UseVisualStyleBackColor = false;
+            this.fourButton.Click += new System.EventHandler(this.fourButton_Click);
             // 
             // fiveButton
             // 
@@ -258,6 +262,7 @@
             this.fiveButton.TabStop = false;
             this.fiveButton.Text = "5";
             this.fiveButton.UseVisualStyleBackColor = false;
+            this.fiveButton.Click += new System.EventHandler(this.fiveButton_Click);
             // 
             // SixButton
             // 
@@ -275,6 +280,7 @@
             this.SixButton.TabStop = false;
             this.SixButton.Text = "6";
             this.SixButton.UseVisualStyleBackColor = false;
+            this.SixButton.Click += new System.EventHandler(this.SixButton_Click);
             // 
             // multiplyButton
             // 
@@ -362,6 +368,7 @@
             this.threeButton.TabStop = false;
             this.threeButton.Text = "3";
             this.threeButton.UseVisualStyleBackColor = false;
+            this.threeButton.Click += new System.EventHandler(this.threeButton_Click);
             // 
             // minusButton
             // 
