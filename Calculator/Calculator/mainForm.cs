@@ -29,54 +29,10 @@ namespace Calculator
             }
         }
 
-        private void zeroButton_Click(object sender, EventArgs e)
+        private void OnButtonClicked(object sender, EventArgs e)
         {
-            digitButtonClick("0");
-        }
-
-        private void oneButton_Click(object sender, EventArgs e)
-        {
-            digitButtonClick("1");
-        }
-
-        private void twoButton_Click(object sender, EventArgs e)
-        {
-            digitButtonClick("2");
-        }
-
-        private void threeButton_Click(object sender, EventArgs e)
-        {
-            digitButtonClick("3");
-        }
-
-        private void fourButton_Click(object sender, EventArgs e)
-        {
-            digitButtonClick("4");
-        }
-
-        private void fiveButton_Click(object sender, EventArgs e)
-        {
-            digitButtonClick("5");
-        }
-
-        private void SixButton_Click(object sender, EventArgs e)
-        {
-            digitButtonClick("6");
-        }
-
-        private void sevenButton_Click(object sender, EventArgs e)
-        {
-            digitButtonClick("7");
-        }
-
-        private void eightButton_Click(object sender, EventArgs e)
-        {
-            digitButtonClick("8");
-        }
-
-        private void nineButton_Click(object sender, EventArgs e)
-        {
-            digitButtonClick("9");
+            Button button = (Button) sender;
+            digitButtonClick(button.Text);
         }
     }
 }
