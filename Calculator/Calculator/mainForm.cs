@@ -14,7 +14,7 @@ namespace Calculator
     {
         private decimal _a;
         private decimal _b;
-
+      
         public mainForm()
         {
             InitializeComponent();
@@ -22,6 +22,13 @@ namespace Calculator
 
         private void digitButtonClick(string digit)
         {
+            if (inputTextBox.Text.Length >= 14)
+            {
+                MessageBox.Show("Достигнута максимальная длина числа", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;         
+            }
+
+
             decimal temp;
             if (decimal.TryParse(inputTextBox.Text + digit, out temp))
             {
