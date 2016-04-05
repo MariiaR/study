@@ -14,6 +14,7 @@ namespace Calculator
     {
         private decimal _a;
         private decimal _b;
+        private string _oper;
       
         public mainForm()
         {
@@ -46,12 +47,57 @@ namespace Calculator
         {
             _a = decimal.Parse(inputTextBox.Text);
             inputTextBox.Text = "0";
+            _oper = "+";
+        }
+
+        
+        private void minusButton_Click(object sender, EventArgs e)
+        {
+            _a = decimal.Parse(inputTextBox.Text);
+            inputTextBox.Text = "0";
+            _oper = "-";
+        }
+
+        private void multiplyButton_Click(object sender, EventArgs e)
+        {
+            _a = decimal.Parse(inputTextBox.Text);
+            inputTextBox.Text = "0";
+            _oper = "*";
+        }
+
+        private void divisionButton_Click(object sender, EventArgs e)
+        {
+            _a = decimal.Parse(inputTextBox.Text);
+            inputTextBox.Text = "0";
+            _oper = "/";
         }
 
         private void resultButton_Click(object sender, EventArgs e)
         {
             _b = decimal.Parse(inputTextBox.Text);
-            inputTextBox.Text = (_a + _b).ToString();
+
+            decimal c = 0;
+            if (_oper == "+")
+            {
+                c = _a + _b;
+            }
+            if (_oper == "-")
+            {
+                c = _a - _b;
+            }
+            if (_oper == "*")
+            {
+                c = _a * _b;
+            }
+            if (_oper == "/")
+            {
+                c = _a / _b;
+            }
+
+            inputTextBox.Text = c.ToString();
+
         }
+
+        
     }
 }

@@ -210,6 +210,7 @@
             this.divisionButton.TabStop = false;
             this.divisionButton.Text = "/";
             this.divisionButton.UseVisualStyleBackColor = false;
+            this.divisionButton.Click += new System.EventHandler(this.divisionButton_Click);
             // 
             // persentButton
             // 
@@ -298,6 +299,7 @@
             this.multiplyButton.TabStop = false;
             this.multiplyButton.Text = "×";
             this.multiplyButton.UseVisualStyleBackColor = false;
+            this.multiplyButton.Click += new System.EventHandler(this.multiplyButton_Click);
             // 
             // invertButton
             // 
@@ -386,6 +388,7 @@
             this.minusButton.TabStop = false;
             this.minusButton.Text = "-";
             this.minusButton.UseVisualStyleBackColor = false;
+            this.minusButton.Click += new System.EventHandler(this.minusButton_Click);
             // 
             // zeroButton
             // 
