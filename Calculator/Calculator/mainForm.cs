@@ -15,6 +15,7 @@ namespace Calculator
         private decimal _a;
         private decimal _b;
         private string _oper;
+        private bool _isResultShown;
       
         public mainForm()
         {
@@ -23,6 +24,11 @@ namespace Calculator
 
         private void digitButtonClick(string digit)
         {
+            if (_isResultShown)
+            {
+                inputTextBox.Text = "0";
+            }
+
             if (inputTextBox.Text.Length >= 14)
             {
                 MessageBox.Show("Достигнута максимальная длина числа", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -76,7 +82,7 @@ namespace Calculator
         {
             _b = decimal.Parse(inputTextBox.Text);
 
-            decimal c = 0;
+            decimal c = _b;
             if (_oper == "+")
             {
                 c = _a + _b;
@@ -93,11 +99,25 @@ namespace Calculator
             {
                 c = _a / _b;
             }
-
+           
             inputTextBox.Text = c.ToString();
+            _isResultShown = true;
 
         }
 
-        
+        private void clearEntryButton_Click(object sender, EventArgs e)
+        {
+            inputTextBox.Text = "0";
+        }
+
+        private void clearAllButton_Click(object sender, EventArgs e)
+        {
+            inputTextBox.Text = "0";
+            _a = 0;
+            _b = 0;
+            _oper = null;
+            _isResultShown = false;
+
+        }
     }
 }

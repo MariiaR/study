@@ -88,6 +88,7 @@
             this.clearEntryButton.TabStop = false;
             this.clearEntryButton.Text = "CE";
             this.clearEntryButton.UseVisualStyleBackColor = false;
+            this.clearEntryButton.Click += new System.EventHandler(this.clearEntryButton_Click);
             // 
             // clearAllButton
             // 
@@ -105,6 +106,7 @@
             this.clearAllButton.TabStop = false;
             this.clearAllButton.Text = "С";
             this.clearAllButton.UseVisualStyleBackColor = false;
+            this.clearAllButton.Click += new System.EventHandler(this.clearAllButton_Click);
             // 
             // plusMinusButton
             // 
