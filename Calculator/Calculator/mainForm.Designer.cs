@@ -71,6 +71,7 @@
             this.backspaceButton.TabStop = false;
             this.backspaceButton.Text = "←";
             this.backspaceButton.UseVisualStyleBackColor = false;
+            this.backspaceButton.Click += new System.EventHandler(this.backspaceButton_Click);
             // 
             // clearEntryButton
             // 
@@ -141,6 +142,7 @@
             this.squareRootButton.TabStop = false;
             this.squareRootButton.Text = "√";
             this.squareRootButton.UseVisualStyleBackColor = false;
+            this.squareRootButton.Click += new System.EventHandler(this.squareRootButton_Click);
             // 
             // sevenButton
             // 

@@ -16,7 +16,8 @@ namespace Calculator
         private decimal _b;
         private string _oper;
         private bool _isResultShown;
-      
+        private double _e;
+       
         public mainForm()
         {
             InitializeComponent();
@@ -78,6 +79,18 @@ namespace Calculator
             _oper = "/";
         }
 
+        private void squareRootButton_Click(object sender, EventArgs e)
+        {
+            _e = double.Parse(inputTextBox.Text);
+            double d = _e;
+            _oper = "sqrt";
+            if (_oper == "sqrt")
+            {
+                d = Math.Sqrt(_e);
+            }
+            inputTextBox.Text = d.ToString();
+        }
+
         private void resultButton_Click(object sender, EventArgs e)
         {
             _b = decimal.Parse(inputTextBox.Text);
@@ -117,7 +130,14 @@ namespace Calculator
             _b = 0;
             _oper = null;
             _isResultShown = false;
-
         }
+
+        private void backspaceButton_Click(object sender, EventArgs e)
+        {
+            inputTextBox.Text = inputTextBox.Text.Substring(0, inputTextBox.Text.Length - 1);
+         
+        }
+
+       
     }
 }
