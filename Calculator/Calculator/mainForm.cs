@@ -16,7 +16,6 @@ namespace Calculator
         private decimal _b;
         private string _oper;
         private bool _isResultShown;
-        private double _e;
        
         public mainForm()
         {
@@ -81,14 +80,16 @@ namespace Calculator
 
         private void squareRootButton_Click(object sender, EventArgs e)
         {
-            _e = double.Parse(inputTextBox.Text);
-            double d = _e;
-            _oper = "sqrt";
-            if (_oper == "sqrt")
+            double input = double.Parse(inputTextBox.Text);
+            if (input >= 0)
             {
-                d = Math.Sqrt(_e);
+                double result = Math.Sqrt(input);
+                inputTextBox.Text = result.ToString();             
             }
-            inputTextBox.Text = d.ToString();
+            else
+            {
+                MessageBox.Show("Нельзя взять корень из отрицательного числа", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);            
+            }
         }
 
         private void resultButton_Click(object sender, EventArgs e)
