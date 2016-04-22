@@ -321,6 +321,7 @@
             this.invertButton.TabStop = false;
             this.invertButton.Text = "1/x";
             this.invertButton.UseVisualStyleBackColor = false;
+            this.invertButton.Click += new System.EventHandler(this.invertButton_Click);
             // 
             // oneButton
             // 

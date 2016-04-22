@@ -78,6 +78,21 @@ namespace Calculator
             _oper = "/";
         }
 
+        private void invertButton_Click(object sender, EventArgs e)
+        {
+            decimal x = decimal.Parse(inputTextBox.Text);
+            if (x == 0)
+            {
+                MessageBox.Show("На ноль делить нельзя", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                decimal invert = 1 / x;
+                inputTextBox.Text = invert.ToString();
+            }
+            _isResultShown = true;
+        }
+
         private void squareRootButton_Click(object sender, EventArgs e)
         {
             double input = double.Parse(inputTextBox.Text);
@@ -139,6 +154,6 @@ namespace Calculator
          
         }
 
-       
+        
     }
 }
