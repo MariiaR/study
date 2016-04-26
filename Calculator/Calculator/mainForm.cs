@@ -47,6 +47,7 @@ namespace Calculator
         {
             Button button = (Button) sender;
             digitButtonClick(button.Text);
+            _isResultShown = false;
         }
 
         private void plusButton_Click(object sender, EventArgs e)
@@ -89,8 +90,9 @@ namespace Calculator
             {
                 decimal invert = 1 / x;
                 inputTextBox.Text = invert.ToString();
+                _isResultShown = true;
             }
-            _isResultShown = true;
+
         }
 
         private void squareRootButton_Click(object sender, EventArgs e)
@@ -99,7 +101,8 @@ namespace Calculator
             if (input >= 0)
             {
                 double result = Math.Sqrt(input);
-                inputTextBox.Text = result.ToString();             
+                inputTextBox.Text = result.ToString();
+                _isResultShown = true;            
             }
             else
             {
