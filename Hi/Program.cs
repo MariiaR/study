@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApplication1
+namespace Hi
 {
     class Program
     {
@@ -12,12 +12,11 @@ namespace ConsoleApplication1
         {
             string hello = "What is your name?";
             string name;
-            string answer = "Hi,";
             Console.WriteLine(hello);
             name = Console.ReadLine();
+            string answer = "Hi,";
             Console.WriteLine(answer + name);
             Console.ReadLine();
-                     
         }
     }
 }
