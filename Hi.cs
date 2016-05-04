@@ -12,9 +12,9 @@ namespace ConsoleApplication1
         {
             string hello = "What is your name?";
             string name;
+            string answer = "Hi,";
             Console.WriteLine(hello);
             name = Console.ReadLine();
-            string answer = "Hi,";
             Console.WriteLine(answer + name);
                      
         }
