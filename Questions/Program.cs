@@ -15,17 +15,15 @@ namespace Questions
             Console.WriteLine("What is your surname?");
             string surname = Console.ReadLine();
             Console.WriteLine("When were you born?");
-            string birthDate = Console.ReadLine();
-            DateTime bD = Convert.ToDateTime(birthDate);
-            TimeSpan Age = (DateTime.Today - bD);
+            DateTime birthDate = DateTime.ParseExact("05261992", "mmddyyyy", null);
+            Console.ReadLine();
             Console.WriteLine("What is your phone number?");
             string phone = Console.ReadLine();
             Console.WriteLine("What is your home address?");
             string address = Console.ReadLine();
-            //Console.WriteLine(Age.ToString("dd:MM:yyyy"));
-            Console.WriteLine("Dear {0},", name);
+            Console.WriteLine("Dear {0} {1}", name, surname);
             Console.ReadLine();
-
+            
         }
     }
 }
