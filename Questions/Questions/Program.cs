@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Globalization;
 
 namespace Questions
 {
@@ -23,7 +24,7 @@ namespace Questions
             Console.WriteLine("What is your home address?");
             string address = Console.ReadLine();
             //Console.WriteLine(Age.ToString("dd:MM:yyyy"));
-            Console.WriteLine("Dear {0},", name);
+            Console.WriteLine("Dear {0}, you are now {1}", name, Age);
             Console.ReadLine();
 
         }
