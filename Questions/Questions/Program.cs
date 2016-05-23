@@ -17,14 +17,18 @@ namespace Questions
             string surname = Console.ReadLine();
             Console.WriteLine("When were you born?");
             string birthDate = Console.ReadLine();
-            DateTime bD = Convert.ToDateTime(birthDate);
-            TimeSpan Age = (DateTime.Today - bD);
+            //birthDate = DateTime.Parse(birthDate).ToShortDateString();
+            int yearNow = DateTime.Today.Year;
+            int birthYear = DateTime.Parse(birthDate).Year;
+            int birthMonth = DateTime.Parse(birthDate).Month;
+            int birthDay = DateTime.Parse(birthDate).Day;
+            int age = yearNow - birthYear;
             Console.WriteLine("What is your phone number?");
             string phone = Console.ReadLine();
             Console.WriteLine("What is your home address?");
             string address = Console.ReadLine();
             //Console.WriteLine(Age.ToString("dd:MM:yyyy"));
-            Console.WriteLine("Dear {0}, you are now {1}", name, Age);
+            Console.WriteLine("Dear {0} {1}, {2}.{3}.{4} you will have your {5} birthday", name, surname, birthDay, birthMonth, yearNow, age);
             Console.ReadLine();
 
         }
